@@ -1,24 +1,40 @@
 # 🔁 Types of Recursion: Head Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to demonstrate **Head Recursion** by finding and printing the sequence based on the sum of all digits (even or odd adjusted input).
+Write a Python program to display all the token numbers of n outpatients issued in the reception counter based on first come first serve.(Use head recursion)
+
 
 ## 🧠 ALGORITHM:
 
-1. **Start**
-2. Define a recursive function `fun(n)`
-3. In the function:
-   - Create a recursive call at the **beginning** (Head Recursion)
-   - Print the result after the recursive call
-4. Take input from the user
-5. If input is odd, convert it to the next even number
-6. Call the recursive function
-7. **Stop**
+1. Start
+2. Read the number of outpatients n.
+3. Define a recursive function display_tokens(i, n):
+      Base case: If i > n, return.
+      Recursive case (head recursion):
+            First call display_tokens(i + 1, n)
+            Then print token number i.
+4. Call display_tokens(1, n).
+5. Stop
+
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+def fun(n):
+   
+    if (n > 0):
+      
+        fun(n - 1)
+      
+        print(n, end=" ")
+ 
+
+x = int(input())
+
+fun(x)
 
 ## OUTPUT
 
+![WhatsApp Image 2025-09-15 at 13 51 03_c5321b7f](https://github.com/user-attachments/assets/92bfbdf8-a8ea-4d15-928d-10f928aaad12)
+
 ## RESULT
+Thus,it verfied.
